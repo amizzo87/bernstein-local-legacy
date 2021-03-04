@@ -12,10 +12,10 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV TERM linux
 
 # Airflow
-ARG AIRFLOW_VERSION=1.10.9
+ARG AIRFLOW_VERSION=1.10.14
 ARG AIRFLOW_USER_HOME=/usr/local/airflow
-ARG AIRFLOW_DEPS=""
-ARG PYTHON_DEPS=""
+ARG AIRFLOW_DEPS="async,amazon,celery,cncf.kubernetes,docker,dask,elasticsearch,ftp,grpc,hashicorp,http,google,microsoft.azure,mysql,postgres,redis,sendgrid,sftp,slack,ssh,statsd,virtualenv"
+ARG PYTHON_DEPS="boto3 requests pandas numpy haversine delorean google-cloud-bigquery google-auth stripe zenpy fastparquet pyarrow google-cloud-automl google-cloud-pubsub beautifulsoup4 google-cloud-storage"
 ENV AIRFLOW_HOME=${AIRFLOW_USER_HOME}
 
 # Define en_US.
