@@ -12,7 +12,7 @@ services:
                 max-file: "3"
 
     webserver:
-        image: amizzo/bernstein-local:latest
+        image: amizzo/bernstein-local-legacy:latest
         restart: always
         depends_on:
             - postgres
